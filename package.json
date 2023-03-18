@@ -1,21 +1,30 @@
 {
   "name": "canvas",
   "version": "1.0.0",
-  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "start": "expo start --dev-client",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "ios:build": "yarn ios:build:cache --no-build-cache",
+    "ios:build:cache": "expo run:ios --no-bundler",
     "web": "expo start --web"
   },
   "dependencies": {
+    "@types/react": "~18.0.24",
+    "@types/react-native": "~0.70.6",
     "expo": "~47.0.12",
-    "expo-status-bar": "~1.4.2",
+    "expo-gl": "^12.0.1",
+    "expo-splash-screen": "~0.17.5",
+    "expo-status-bar": "^1.4.4",
+    "expo-three": "^7.0.0",
     "react": "18.1.0",
-    "react-native": "0.70.5"
+    "react-native": "0.70.5",
+    "three": "^0.149.0",
+    "typescript": "^4.6.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "^7.12.9",
+    "@types/three": "^0.149.0"
   },
   "private": true
 }
